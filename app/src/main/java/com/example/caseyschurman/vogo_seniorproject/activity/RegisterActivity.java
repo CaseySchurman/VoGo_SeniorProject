@@ -153,6 +153,7 @@ public class RegisterActivity extends Activity {
                 try {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
+
                     if (!error) {
                         //User successfully stored in MySQL
                         //Now store the user in sqlite
@@ -244,8 +245,6 @@ public class RegisterActivity extends Activity {
         Boolean isValid = true;
         Boolean containsDigit = false;
 
-
-        //ADD CHECK FOR SPECIAL CHARACTER AND DIGIT
         if(password.length() > 4){
             char[] arrPassword = password.toCharArray();
 

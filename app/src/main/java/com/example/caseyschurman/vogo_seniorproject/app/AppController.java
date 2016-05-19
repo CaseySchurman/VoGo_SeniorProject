@@ -47,13 +47,11 @@ public class AppController extends Application {
         getRequestQueue().add(req);
     }
 
-    //POSSIBLY REMOVE THIS METHOD, ITS UNUSED
     public <T> void addToRequestQueue(Request<T> req) {
         req.setTag(TAG);
         getRequestQueue().add(req);
     }
 
-    //POSSIBLY REMOVE THIS METHOD, ITS UNUSED
     public void cancelPendingRequests(Object tag) {
         if (mRequestQueue != null) {
             mRequestQueue.cancelAll(tag);
